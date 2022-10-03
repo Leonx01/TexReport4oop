@@ -7,7 +7,7 @@
 
 ### ✍️ 作者
 
-- 我是 [Leonx01]([Leonx01 (nileonx) · GitHub](https://github.com/Leonx01))，一名软件工程专业学生，目前在学习面向对象程序设计这门课程。
+- 我是 [Leonx01](https://github.com/Leonx01))，一名软件工程专业学生，目前在学习面向对象程序设计这门课程。
 
 - 在实验课程中，老师给了docx格式的报告模板，并且要求以pdf格式提交。
 
@@ -75,7 +75,7 @@
 
 - [XeCJK宏包v3.9.1*](http://mirrors.ibiblio.org/CTAN/macros/xetex/latex/xecjk/xeCJK.pdf)
 
-- [LaTex-wiki]([LaTeX - 维基教科书，自由的教学读本](https://zh.m.wikibooks.org/wiki/LaTeX))
+- [LaTeX - 维基教科书，自由的教学读本](https://zh.m.wikibooks.org/wiki/LaTeX))
 
 - [简单粗暴 LATEX](http://static.latexstudio.net/wp-content/uploads/2017/08/Note-by-LaTeX-cn.pdf)
 
