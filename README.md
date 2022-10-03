@@ -15,14 +15,6 @@
 
 - 这里是我用课余时间完成的Tex版本复刻，提供给大家，作为Tex排版学习交流。
 
-## 🥇效果展示
-部分效果展示如下，完整效果展示请查看pdf格式的template文件
-![example01](https://raw.githubusercontent.com/Leonx01/TexReport4oop/main/texTemplate/exmple01.jpg)
-![example02](https://raw.githubusercontent.com/Leonx01/TexReport4oop/main/texTemplate/exmple02.jpg)
-![example03](https://raw.githubusercontent.com/Leonx01/TexReport4oop/main/texTemplate/exmple03.jpg)
-
-
-
 ## 🚀 使用方法
 
 确保你的设备安装了tex文件的运行环境，并且安装了以下宏包
@@ -98,5 +90,11 @@
 - [西安交通大学视觉形象识别系统](http://vi.xjtu.edu.cn/)
   
   算法流程图绘制
+  
+  ## 🥇效果展示
+部分效果展示如下，完整效果展示请查看pdf格式的template文件
+![example01](https://raw.githubusercontent.com/Leonx01/TexReport4oop/main/texTemplate/exmple01.jpg)
+![example02](https://raw.githubusercontent.com/Leonx01/TexReport4oop/main/texTemplate/exmple02.jpg)
+![example03](https://raw.githubusercontent.com/Leonx01/TexReport4oop/main/texTemplate/exmple03.jpg)
 
 - [ioDraw](https://www.iodraw.com/)
