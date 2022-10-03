@@ -1,0 +1,716 @@
+\documentclass{article}
+\usepackage{listings} 
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{ctex}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage{CJKfntef}
+\usepackage{CJKulem}
+\usepackage{soul}
+\usepackage{fancyhdr}
+\usepackage{subfigure}
+% 目录字体设置
+\usepackage[subfigure]{tocloft}
+
+
+\renewcommand{\contentsname}{\kaishu\fontsize{24pt}{\baselineskip}\selectfont \textbf{目录}}
+\renewcommand{\cftsecleader}{\cftdotfill{0.6}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{0.6}}
+
+\renewcommand{\cftsecfont}{\kaishu \fontsize{15pt}{10pt}\selectfont  }
+\renewcommand{\cftsubsecfont}{\kaishu\fontsize{10pt}{0pt}\selectfont}
+
+
+\pagestyle{fancy}
+% 页眉设置
+%\lhead{\includegraphics[scale = 0.01]{Page.jpg}}
+\fancyhead[L]{\includegraphics[width = 3cm,height = 0.6cm]{XJTU.png}}
+\fancyhead[R]{面向对象程序设计实验报告}
+%\fancyhead[C]{中间页眉}
+% 页脚设置
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{}
+\renewcommand{\headrulewidth}{0.2pt} % 分隔线宽度4磅
+\renewcommand{\footrulewidth}{0.2pt}
+
+\definecolor{red}{RGB}{200,30,22}
+%自定义交大红色
+\newcommand\reduline{\bgroup\markoverwith
+{\textcolor{red}{\rule[-0.5ex]{10pt}{3pt}}}\ULon}
+%自定义命令
+\geometry{left=3.17cm,right=3.17cm,top=1.75cm,bottom=2.54cm}
+%设置页边距
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+	language=Java, % 使用的语言
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false, % 仅在字符串中允许空格
+	backgroundcolor=\color{white},   % 选择代码背景，必须加上\ usepackage {color}或\ usepackage {xcolor}
+	columns=flexible,
+	basicstyle = \ttfamily\small,
+	numberstyle=\small \color{gray},  % 行号的字号和颜色
+	numbers=left, %给代码添加行号，可取值none, left, right.
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen}, % 设置注释格式
+	stringstyle=\color{mauve},
+	breaklines=true,   % 设置自动断行.
+	breakatwhitespace=true, % 设置是否当且仅当在空白处自动中断.
+	escapeinside=``, %逃逸字符(1左面的键)，用于显示中文t
+	frame=single, %设置边框格式
+	extendedchars=false, %解决代码跨页时，章节标题，页眉等汉字不显示的问题
+	xleftmargin=2em,xrightmargin=2em, aboveskip=1em, %设置边距
+	tabsize=4 % 将默认tab设置为4个空格
+}
+
+\title{\textbf {\kaishu\fontsize{48pt} {48pt}\selectfont 面向对象程序设计\\[15pt]作业报告}}
+\author{\reduline{\fontsize{1pt}{1pt}\selectfont \hspace*{400pt}}}
+\date{\fontsize{25pt}{20pt}\selectfont 第\,\,N\,\,次}
+
+\begin{document}
+\maketitle
+\begin{center}
+\includegraphics[scale = 0.14]{honor.jpg}%交大校徽
+\\[50pt] %空行
+\end{center}
+
+\begin{description}
+    \linespread{2}
+    \item[\kaishu \fontsize{20pt}{20pt}\selectfont 姓名]\hspace*{50pt} \CJKunderdblline{\kaishu \fontsize{20pt}{20pt}\selectfont XXX \hspace*{250pt}}
+    \item[\kaishu \fontsize{20pt}{20pt}\selectfont 班级]\hspace*{50pt}\CJKunderdblline{\kaishu \fontsize{20pt}{20pt}\selectfont 软件xxxx班\hspace*{218pt}}
+    \item[\kaishu \fontsize{20pt}{20pt}\selectfont 学号]\hspace*{50pt} \CJKunderdblline{\fontsize{20pt}{20pt}\selectfont  1111111111\hspace*{220pt}}
+    \item[\kaishu \fontsize{20pt}{20pt}\selectfont 电话]\hspace*{50pt} \CJKunderdblline {\fontsize{20pt}{20pt}\selectfont  11111111111\hspace*{210pt}}
+    \item[\sffamily \fontsize{20pt}{20pt}\selectfont Email]\hspace*{40pt} \CJKunderdblline {\fontsize{20pt}{20pt}\selectfont  $xxxxx@xxxxx.com$\hspace*{145pt}}
+    \item[\kaishu \fontsize{20pt}{20pt}\selectfont 日期]\hspace*{52pt}\CJKunderdblline {\fontsize{20pt}{20pt}\selectfont  xxxx-xx-xx \hspace*{225pt}}
+%根据需求动态调整\hspace{}中的占位空格
+\end{description}
+\setcounter{page}{0}%封面不计页数
+\thispagestyle{empty}%封面不设置页眉页脚
+\newpage
+
+
+
+%目录页开始
+
+\begin{center}
+	\tableofcontents
+\end{center}
+
+
+
+\newpage
+%第一个实验
+\section{\songti实验\,1}
+
+\subsection{\songti题目:}
+\noindent\kaishu \textbf{题目要求}
+\begin{description}
+	\item [\kaishu输入]
+	\begin{enumerate}
+		\item \kaishu 输入方式
+		\item \kaishu 数据范围
+	\end{enumerate}
+	\item [\kaishu实现]
+	\begin{enumerate}
+		\item 实现方法
+		\end{enumerate}
+	\item [\kaishu输出]
+	\begin{enumerate}
+		\item []\kaishu 输出内容以及方式
+	\end{enumerate}
+\end{description}
+
+\subsection{\songti数据设计}
+\begin{itemize}
+	\item\kaishu类层面上
+	\begin{description}
+		\item[X\,\,class]\kaishu 整体上存储的数据和实现的功能。
+		\item[Y\,\,class]\kaishu 整体上存储的数据和实现的功能。
+	\end{description}
+	\item\kaishu属性和方法层面上
+	\begin{description}
+		\item[Solution03\,class]
+		\begin{enumerate}
+			\item[] \hspace{2pt}
+			\item \kaishu $int\,\,n:$\,存储内容和功能。
+			\item \kaishu $String[\,]str:$\,存储内容和功能。
+			\item \kaishu $Scanner\,scr:$\,存储内容和功能。
+		\end{enumerate}
+	\end{description}
+\end{itemize}
+
+
+\subsection{\songti算法设计}
+\begin{itemize}
+	\item \kaishu 算法流程图
+	\begin{center}
+	%	\includegraphics[scale =xxx]{xxx.png}
+	\end{center}
+	\item \kaishu 主要思路
+	\begin{description}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+		\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+				\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+	\end{description}
+\end{itemize}
+
+\subsection{\songti主干代码说明}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Code  and Notes        
+//Notes and String values should be in English
+	\end{lstlisting}
+\end{center}
+
+
+\subsection{\songti运行结果展示}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Input...     //Test n
+	\end{lstlisting}
+\end{center}
+
+\begin{center}
+\begin{lstlisting}[language = Java]
+Output...
+\end{lstlisting}
+\end{center}
+\subsection{\songti总结和收获}
+\begin{enumerate}
+	\item\kaishu
+	\item\kaishu
+	\item\kaishu
+\end{enumerate}
+\newpage
+\section{\songti实验\,2}
+
+\subsection{\songti题目:}
+\noindent\kaishu \textbf{题目要求}
+\begin{description}
+	\item [\kaishu输入]
+	\begin{enumerate}
+		\item \kaishu 输入方式
+		\item \kaishu 数据范围
+	\end{enumerate}
+	\item [\kaishu实现]
+	\begin{enumerate}
+		\item 实现方法
+		\end{enumerate}
+	\item [\kaishu输出]
+	\begin{enumerate}
+		\item []\kaishu 输出内容以及方式
+	\end{enumerate}
+\end{description}
+
+\subsection{\songti数据设计}
+\begin{itemize}
+	\item\kaishu类层面上
+	\begin{description}
+		\item[X\,\,class]\kaishu 整体上存储的数据和实现的功能。
+		\item[Y\,\,class]\kaishu 整体上存储的数据和实现的功能。
+	\end{description}
+	\item\kaishu属性和方法层面上
+	\begin{description}
+		\item[Solution03\,class]
+		\begin{enumerate}
+			\item[] \hspace{2pt}
+			\item \kaishu $int\,\,n:$\,存储内容和功能。
+			\item \kaishu $String[\,]str:$\,存储内容和功能。
+			\item \kaishu $Scanner\,scr:$\,存储内容和功能。
+		\end{enumerate}
+	\end{description}
+\end{itemize}
+
+
+\subsection{\songti算法设计}
+\begin{itemize}
+	\item \kaishu 算法流程图
+	\begin{center}
+	%	\includegraphics[scale =xxx]{xxx.png}
+	\end{center}
+	\item \kaishu 主要思路
+	\begin{description}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+		\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+				\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+	\end{description}
+\end{itemize}
+
+\subsection{\songti主干代码说明}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Code  and Notes        
+//Notes and String values should be in English
+	\end{lstlisting}
+\end{center}
+
+
+\subsection{\songti运行结果展示}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Input...     //Test n
+	\end{lstlisting}
+\end{center}
+
+\begin{center}
+\begin{lstlisting}[language = Java]
+Output...
+\end{lstlisting}
+\end{center}
+\subsection{\songti总结和收获}
+\begin{enumerate}
+	\item\kaishu
+	\item\kaishu
+	\item\kaishu
+\end{enumerate}
+\newpage
+
+
+\section{\songti实验\,3}
+
+\subsection{\songti题目:}
+\noindent\kaishu \textbf{题目要求}
+\begin{description}
+	\item [\kaishu输入]
+	\begin{enumerate}
+		\item \kaishu 输入方式
+		\item \kaishu 数据范围
+	\end{enumerate}
+	\item [\kaishu实现]
+	\begin{enumerate}
+		\item 实现方法
+		\end{enumerate}
+	\item [\kaishu输出]
+	\begin{enumerate}
+		\item []\kaishu 输出内容以及方式
+	\end{enumerate}
+\end{description}
+
+\subsection{\songti数据设计}
+\begin{itemize}
+	\item\kaishu类层面上
+	\begin{description}
+		\item[X\,\,class]\kaishu 整体上存储的数据和实现的功能。
+		\item[Y\,\,class]\kaishu 整体上存储的数据和实现的功能。
+	\end{description}
+	\item\kaishu属性和方法层面上
+	\begin{description}
+		\item[Solution03\,class]
+		\begin{enumerate}
+			\item[] \hspace{2pt}
+			\item \kaishu $int\,\,n:$\,存储内容和功能。
+			\item \kaishu $String[\,]str:$\,存储内容和功能。
+			\item \kaishu $Scanner\,scr:$\,存储内容和功能。
+		\end{enumerate}
+	\end{description}
+\end{itemize}
+
+
+\subsection{\songti算法设计}
+\begin{itemize}
+	\item \kaishu 算法流程图
+	\begin{center}
+	%	\includegraphics[scale =xxx]{xxx.png}
+	\end{center}
+	\item \kaishu 主要思路
+	\begin{description}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+		\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+				\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+	\end{description}
+\end{itemize}
+
+\subsection{\songti主干代码说明}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Code  and Notes        
+//Notes and String values should be in English
+	\end{lstlisting}
+\end{center}
+
+
+\subsection{\songti运行结果展示}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Input...     //Test n
+	\end{lstlisting}
+\end{center}
+
+\begin{center}
+\begin{lstlisting}[language = Java]
+Output...
+\end{lstlisting}
+\end{center}
+\subsection{\songti总结和收获}
+\begin{enumerate}
+	\item\kaishu
+	\item\kaishu
+	\item\kaishu
+\end{enumerate}
+\newpage
+
+
+\section{\songti实验\,4}
+
+\subsection{\songti题目:}
+\noindent\kaishu \textbf{题目要求}
+\begin{description}
+	\item [\kaishu输入]
+	\begin{enumerate}
+		\item \kaishu 输入方式
+		\item \kaishu 数据范围
+	\end{enumerate}
+	\item [\kaishu实现]
+	\begin{enumerate}
+		\item 实现方法
+		\end{enumerate}
+	\item [\kaishu输出]
+	\begin{enumerate}
+		\item []\kaishu 输出内容以及方式
+	\end{enumerate}
+\end{description}
+
+\subsection{\songti数据设计}
+\begin{itemize}
+	\item\kaishu类层面上
+	\begin{description}
+		\item[X\,\,class]\kaishu 整体上存储的数据和实现的功能。
+		\item[Y\,\,class]\kaishu 整体上存储的数据和实现的功能。
+	\end{description}
+	\item\kaishu属性和方法层面上
+	\begin{description}
+		\item[Solution03\,class]
+		\begin{enumerate}
+			\item[] \hspace{2pt}
+			\item \kaishu $int\,\,n:$\,存储内容和功能。
+			\item \kaishu $String[\,]str:$\,存储内容和功能。
+			\item \kaishu $Scanner\,scr:$\,存储内容和功能。
+		\end{enumerate}
+	\end{description}
+\end{itemize}
+
+
+\subsection{\songti算法设计}
+\begin{itemize}
+	\item \kaishu 算法流程图
+	\begin{center}
+	%	\includegraphics[scale =xxx]{xxx.png}
+	\end{center}
+	\item \kaishu 主要思路
+	\begin{description}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+		\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+				\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+	\end{description}
+\end{itemize}
+
+\subsection{\songti主干代码说明}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Code  and Notes        
+//Notes and String values should be in English
+	\end{lstlisting}
+\end{center}
+
+
+\subsection{\songti运行结果展示}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Input...     //Test n
+	\end{lstlisting}
+\end{center}
+
+\begin{center}
+\begin{lstlisting}[language = Java]
+Output...
+\end{lstlisting}
+\end{center}
+\subsection{\songti总结和收获}
+\begin{enumerate}
+	\item\kaishu
+	\item\kaishu
+	\item\kaishu
+\end{enumerate}
+\newpage
+
+
+\section{\songti实验\,5}
+
+\subsection{\songti题目:}
+\noindent\kaishu \textbf{题目要求}
+\begin{description}
+	\item [\kaishu输入]
+	\begin{enumerate}
+		\item \kaishu 输入方式
+		\item \kaishu 数据范围
+	\end{enumerate}
+	\item [\kaishu实现]
+	\begin{enumerate}
+		\item 实现方法
+		\end{enumerate}
+	\item [\kaishu输出]
+	\begin{enumerate}
+		\item []\kaishu 输出内容以及方式
+	\end{enumerate}
+\end{description}
+
+\subsection{\songti数据设计}
+\begin{itemize}
+	\item\kaishu类层面上
+	\begin{description}
+		\item[X\,\,class]\kaishu 整体上存储的数据和实现的功能。
+		\item[Y\,\,class]\kaishu 整体上存储的数据和实现的功能。
+	\end{description}
+	\item\kaishu属性和方法层面上
+	\begin{description}
+		\item[Solution03\,class]
+		\begin{enumerate}
+			\item[] \hspace{2pt}
+			\item \kaishu $int\,\,n:$\,存储内容和功能。
+			\item \kaishu $String[\,]str:$\,存储内容和功能。
+			\item \kaishu $Scanner\,scr:$\,存储内容和功能。
+		\end{enumerate}
+	\end{description}
+\end{itemize}
+
+
+\subsection{\songti算法设计}
+\begin{itemize}
+	\item \kaishu 算法流程图
+	\begin{center}
+	%	\includegraphics[scale =xxx]{xxx.png}
+	\end{center}
+	\item \kaishu 主要思路
+	\begin{description}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+		\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+				\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+	\end{description}
+\end{itemize}
+
+\subsection{\songti主干代码说明}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Code  and Notes        
+//Notes and String values should be in English
+	\end{lstlisting}
+\end{center}
+
+
+\subsection{\songti运行结果展示}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Input...     //Test n
+	\end{lstlisting}
+\end{center}
+
+\begin{center}
+\begin{lstlisting}[language = Java]
+Output...
+\end{lstlisting}
+\end{center}
+\subsection{\songti总结和收获}
+\begin{enumerate}
+	\item\kaishu
+	\item\kaishu
+	\item\kaishu
+\end{enumerate}
+\newpage
+
+\section{\songti实验\,6}
+
+\subsection{\songti题目:}
+\noindent\kaishu \textbf{题目要求}
+\begin{description}
+	\item [\kaishu输入]
+	\begin{enumerate}
+		\item \kaishu 输入方式
+		\item \kaishu 数据范围
+	\end{enumerate}
+	\item [\kaishu实现]
+	\begin{enumerate}
+		\item 实现方法
+		\end{enumerate}
+	\item [\kaishu输出]
+	\begin{enumerate}
+		\item []\kaishu 输出内容以及方式
+	\end{enumerate}
+\end{description}
+
+\subsection{\songti数据设计}
+\begin{itemize}
+	\item\kaishu类层面上
+	\begin{description}
+		\item[X\,\,class]\kaishu 整体上存储的数据和实现的功能。
+		\item[Y\,\,class]\kaishu 整体上存储的数据和实现的功能。
+	\end{description}
+	\item\kaishu属性和方法层面上
+	\begin{description}
+		\item[Solution03\,class]
+		\begin{enumerate}
+			\item[] \hspace{2pt}
+			\item \kaishu $int\,\,n:$\,存储内容和功能。
+			\item \kaishu $String[\,]str:$\,存储内容和功能。
+			\item \kaishu $Scanner\,scr:$\,存储内容和功能。
+		\end{enumerate}
+	\end{description}
+\end{itemize}
+
+
+\subsection{\songti算法设计}
+\begin{itemize}
+	\item \kaishu 算法流程图
+	\begin{center}
+	%	\includegraphics[scale =xxx]{xxx.png}
+	\end{center}
+	\item \kaishu 主要思路
+	\begin{description}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+		\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+		\item[\kaishu XXX]
+			\begin{enumerate}
+				\item[]\hspace{2pt}
+				\item\kaishu
+				\item\kaishu
+				\item\kaishu
+			\end{enumerate}
+	\end{description}
+\end{itemize}
+
+\subsection{\songti主干代码说明}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Code  and Notes        
+//Notes and String values should be in English
+	\end{lstlisting}
+\end{center}
+
+
+\subsection{\songti运行结果展示}
+\begin{center}
+	\begin{lstlisting}[language = Java]
+Input...     //Test n
+	\end{lstlisting}
+\end{center}
+
+\begin{center}
+\begin{lstlisting}[language = Java]
+Output...
+\end{lstlisting}
+\end{center}
+\subsection{\songti总结和收获}
+\begin{enumerate}
+	\item\kaishu
+	\item\kaishu
+	\item\kaishu
+\end{enumerate}
+\newpage
+
+\section{\songti源码}
+\subsection{\heiti实验\,1}
+\begin{center}
+\begin{lstlisting}[language=Java]
+CodeBlocks
+\end{lstlisting}
+\end{center}
+\subsection{\heiti实验\,2}
+\begin{center}
+\begin{lstlisting}[language=Java]
+CodeBlocks
+\end{lstlisting}
+\end{center}
+\subsection{\heiti实验\,3}
+\begin{center}
+\begin{lstlisting}[language=Java]
+CodeBlocks
+\end{lstlisting}
+\end{center}
+\subsection{\heiti实验\,4}
+\begin{center}
+\begin{lstlisting}[language=Java]
+CodeBlocks
+\end{lstlisting}
+\end{center}
+\subsection{\heiti实验\,5}
+\begin{center}
+\begin{lstlisting}[language=Java]
+CodeBlocks
+\end{lstlisting}
+\end{center}
+\subsection{\heiti实验\,6}
+\begin{center}
+\begin{lstlisting}[language=Java]
+CodeBlocks
+\end{lstlisting}
+\end{center}
+
+
+
+
+\end{document}
